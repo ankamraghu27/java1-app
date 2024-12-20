@@ -5,7 +5,7 @@ stages
 stage('Build') 
 {
 steps{
-echo "Building the Code.........."
+git branch: 'main', changelog: false, credentialsId: '6d364932-1dcf-4658-8846-aeae8526ec91', poll: false, url: 'https://github.com/ankamraghu27/java1-app.git'
  sh "mvn -version"
  sh "mvn clean"
 }
